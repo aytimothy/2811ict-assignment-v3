@@ -1,0 +1,63 @@
+.hidden {
+  display: none;
+}
+
+.main-panel {
+  padding: 0 !important;
+  display: inline-block;
+  height: 100%;
+  float: left;
+  margin: 0;
+}
+
+.main-panel .card .card-body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.main-panel .card .card-header {
+  overflow: hidden;
+  height: 48px;
+  padding: 12px 20px;
+}
+
+.top-card {
+  height: calc(100vh - 56px);
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.overlay-dialog {
+  position: absolute;
+  width: 500px;
+  height: 600px;
+  top: calc(50vh - 300px);
+  left: calc(50vw - 250px);
+  background-color: white;
+  padding: 16px;
+}
+
+#message-input {
+  width: calc(100% - 64px)
+}
+
+.message-card {
+  padding-bottom: 32px;
+}
+
+.message-card .card-header {
+  min-height: 92px;
+}
+
+.message-card .card-header img {
+  height: 64px;
+}

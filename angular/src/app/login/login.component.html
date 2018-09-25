@@ -1,0 +1,41 @@
+<main>
+  <div id="login-panel">
+    <div class="alert alert-danger hidden" role="alert" id="login-dialog-alert">
+      A simple danger alert—check it out!
+    </div>
+    <h2 class="form-signin-heading">Please sign in.</h2>
+    <label for="username-input" class="sr-only">Username</label>
+    <input type="text" id="username-input" class="form-control" placeholder="Username" autofocus autocomplete="off" [(ngModel)]="login_username">
+    <label for="password-input" class="sr-only">Password</label>
+    <input type="password" id="password-input" class="form-control" placeholder="Password" autofocus autocomplete="off"[(ngModel)]="login_password">
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" value="remember-me"[(ngModel)]="login_remember">
+        Remember me
+      </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" (click)="login()">Sign in</button>
+    <button class="btn btn-lg btn-primary btn-block" (click)="show('register')">Register</button>
+  </div>
+  <div id="overlay" class="hidden">
+    <div id="register-panel">
+      <div class="alert alert-danger hidden" role="alert" id="register-dialog-alert">
+        Errors goes in here!!
+      </div>
+      <label for="reg-username-input" class="sr-only">Username</label>
+      <input type="text" id="reg-username-input" class="form-control" placeholder="Username" autofocus autocomplete="off" [(ngModel)]="register_username">
+      <label for="reg-password-input" class="sr-only">Password</label>
+      <input type="password" id="reg-password-input" class="form-control" placeholder="Password" autofocus autocomplete="off" [(ngModel)]="register_password">
+      <label for="reg-password2-input" class="sr-only">Confirm Password</label>
+      <input type="password" id="reg-password2-input" class="form-control" placeholder="Confirm Password" autofocus autocomplete="off"[(ngModel)]="register_password2">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="reg-agree"[(ngModel)]="register_agree">
+          I accept nothing. (Just check the box)
+        </label>
+        <button class="btn btn-lg btn-primary btn-block" (click)="show('login')">Back</button>
+        <button class="btn btn-lg btn-primary btn-block" (click)="register();">Register</button>
+      </div>
+    </div>
+  </div>
+</main>

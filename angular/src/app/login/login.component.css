@@ -1,0 +1,39 @@
+main {
+  background-color: gray;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+#login-panel {
+  background-color: white;
+  position: absolute;
+  top: calc(50vh - 150px);
+  left: calc(50vw - 250px);
+  width: 500px;
+  min-height: 300px;
+  padding: 16px;
+}
+
+#register-panel {
+  background-color: white;
+  position: absolute;
+  top: calc(50vh - 250px);
+  left: calc(50vw - 250px);
+  width: 500px;
+  min-height: 500px;
+  padding: 16px;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hidden {
+  display: none;
+}

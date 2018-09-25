@@ -1,0 +1,66 @@
+<nav class="navbar navbar-fixed-top myfont" >
+  <a class="navbar-brand">Chat App</a>
+  <span id="username">Logged in as %username%</span>
+  <div>
+    <a href="javascript:" (click)="show_settings()">Settings</a>
+    &nbsp;
+    <a href="javascript:" (click)="logout()">Logout</a>
+  </div>
+</nav>
+<main>
+  <div class="main-panel col-8">
+    <div class="card top-card">
+      <h5 class="card-header">Chat</h5>
+      <div class="card-body" id="messages">
+        <div class="card message-card">
+          <div class="card-header">
+            <img src="https://via.placeholder.com/512x512">
+            Sender
+          </div>
+          <div class="card-body">
+            Body
+          </div>
+        </div>
+      </div>
+      <div class="card-footer align-middle">
+        <input name="message" type="text" [(ngModel)]="message_input" id="message-input">
+        &nbsp;
+        <a class="btn btn-sm btn-primary" (click)="send()">
+          Send
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="main-panel col-4">
+    <div class="card top-card">
+      <h5 class="card-header">Users</h5>
+      <div class="card-body" id="peoples">
+        Peoples
+      </div>
+    </div>
+  </div>
+</main>
+<div id="overlay" class="hidden">
+  <div id="settings-dialog" class="overlay-dialog">
+    <h1>Edit your settings</h1>
+    <hr>
+    <form>
+      <div class="form-group">
+        <label for="file-input">New Avatar</label>
+        <input class="form-control-file" type="file" name="newAvatar" id="file-input" [(ngModel)]="new_avatar" (change)="onFileSelect($event)">
+      </div>
+      <div class="form-group">
+        <label for="password-input">New Password</label>
+        <input class="form-control" type="password" name="newPassword" id="password-input" [(ngModel)]="new_password">
+      </div>
+      <div class="form-group">
+        <label for="password-input2">Confirm New Password</label>
+        <input class="form-control" type="password" name="newPassword" id="password-input2" [(ngModel)]="new_password2">
+      </div>
+      <hr>
+      <a href="javascript:" (click)="update_settings()" class="btn btn-primary">Update!</a>
+      &nbsp;
+      <a href="javascript:" (click)="hide_settings()" class="btn btn-danger">Cancel</a>
+    </form>
+  </div>
+</div>
